@@ -4,7 +4,6 @@ WORKDIR /build
 
 COPY bower.json gulp gulpfile.js package.json pom.xml /build/
 COPY dev /build/dev/
-COPY etc /build/etc/
 COPY src /build/src/
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
