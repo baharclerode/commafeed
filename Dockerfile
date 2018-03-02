@@ -17,7 +17,7 @@ WORKDIR /server/
 
 COPY --from=builder /build/target/commafeed.jar /server/server.jar
 COPY config.yml.example /server/config.yml.example
-ENTRYPOINT ["/usr/local/bin/java", "-jar", "/server/server.jar"]
+ENTRYPOINT ["/usr/bin/java", "-jar", "/server/server.jar"]
 
 CMD ["server", "/server/config.yml.example"]
 
