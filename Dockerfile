@@ -2,7 +2,7 @@ FROM maven:3.5.2-jdk-8 AS builder
 
 WORKDIR /build
 
-COPY bower.json gulp gulpfile.js package.json pom.xml mvnw /build/
+COPY .bowerrc bower.json gulp gulpfile.js package.json pom.xml mvnw /build/
 COPY dev /build/dev/
 COPY src /build/src/
 COPY maven /build/maven/
