@@ -8,7 +8,7 @@ COPY src /build/src/
 COPY maven /build/maven/
 
 RUN echo '{ "allow_root": true }' > /root/.bowerrc
-RUN mvnw clean install
+RUN /build/mvnw clean install
 
 FROM openjdk:8-jre-alpine
 
